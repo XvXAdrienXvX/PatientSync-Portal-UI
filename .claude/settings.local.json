@@ -7,7 +7,8 @@
       "Bash(Remove-Item button\\\\button.html, card\\\\card.html, form-field\\\\form-field.html, toast\\\\toast.html, loader\\\\loader.html, dropdown\\\\dropdown.html)",
       "Bash(uv sync *)",
       "Bash(uv run *)",
-      "Bash(Test-Path C:\\\\Users\\\\adrie_j88pz5v\\\\AppData\\\\Local\\\\ms-playwright\\\\chromium-1223 *)"
+      "Bash(Test-Path C:\\\\Users\\\\adrie_j88pz5v\\\\AppData\\\\Local\\\\ms-playwright\\\\chromium-1223 *)",
+      "Bash(npx ng *)"
     ]
   }
 }
