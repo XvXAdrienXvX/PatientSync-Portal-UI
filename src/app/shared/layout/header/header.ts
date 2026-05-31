@@ -11,7 +11,7 @@ export type UserRole = 'patient' | 'doctor';
   imports: [MatToolbar, MatIconButton, MatIcon],
   template: `
     <mat-toolbar class="!bg-white shadow-sm border-b !px-4">
-      <span class="font-bold text-lg">Admedica</span>
+      <span class="font-bold text-lg"></span>
       <span class="flex-1"></span>
       <span class="text-sm text-gray-600 mr-2 hidden sm:block">{{ userName() }}</span>
       <button mat-icon-button (click)="menuToggled.emit()" aria-label="Toggle menu">
