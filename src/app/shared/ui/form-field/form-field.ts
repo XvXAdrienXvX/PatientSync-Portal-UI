@@ -1,31 +1,29 @@
-import { Component, input } from '@angular/core';
-import { MatError, MatFormField, MatHint, MatLabel } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { Component, computed, input } from '@angular/core';
 
 @Component({
   selector: 'ui-form-field',
   standalone: true,
-  imports: [MatFormField, MatLabel, MatError, MatHint, MatInputModule],
   template: `
-    <mat-form-field [appearance]="appearance()" class="w-full">
+    <div class="flex flex-col gap-1 w-full">
       @if (label()) {
-        <mat-label>
+        <label class="text-sm font-medium text-gray-700">
           {{ label() }}
           @if (required()) {
-            <span class="text-red-500" aria-hidden="true">*</span>
+            <span class="text-red-500 ml-0.5" aria-hidden="true">*</span>
           }
-        </mat-label>
+        </label>
       }
 
-      <ng-content />
+      <div [class]="wrapperClass()">
+        <ng-content />
+      </div>
 
       @if (error()) {
-        <mat-error>{{ error() }}</mat-error>
+        <p class="text-xs text-red-600">{{ error() }}</p>
+      } @else if (hint()) {
+        <p class="text-xs text-gray-400">{{ hint() }}</p>
       }
-      @if (hint() && !error()) {
-        <mat-hint>{{ hint() }}</mat-hint>
-      }
-    </mat-form-field>
+    </div>
   `,
 })
 export class FormFieldComponent {
@@ -34,4 +32,12 @@ export class FormFieldComponent {
   readonly hint = input('');
   readonly required = input(false);
   readonly appearance = input<'outline' | 'fill'>('outline');
+
+  protected readonly wrapperClass = computed(() => {
+    const fill = this.appearance() === 'fill' ? 'bg-gray-100 rounded-t-lg border-b-2' : 'bg-white rounded-lg border';
+    const state = this.error()
+      ? 'border-red-400 focus-within:border-red-500 focus-within:ring-2 focus-within:ring-red-500/20'
+      : 'border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
+    return `flex items-center w-full transition-colors ${fill} ${state}`;
+  });
 }

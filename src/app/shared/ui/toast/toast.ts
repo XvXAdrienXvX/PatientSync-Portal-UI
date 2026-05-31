@@ -1,6 +1,4 @@
 import { Component, computed, input, output } from '@angular/core';
-import { MatIcon } from '@angular/material/icon';
-import { MatIconButton } from '@angular/material/button';
 
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 
@@ -14,12 +12,9 @@ const ICONS: Record<ToastType, string> = {
 @Component({
   selector: 'ui-toast',
   standalone: true,
-  imports: [MatIcon, MatIconButton],
   template: `
-    <div role="alert" [class]="containerClasses()">
-      <mat-icon class="shrink-0 !h-5 !w-5 !text-[20px] mt-0.5" aria-hidden="true">
-        {{ icon() }}
-      </mat-icon>
+    <div role="alert" [class]="containerClass()">
+      <span class="material-icons shrink-0 text-[20px] mt-0.5" aria-hidden="true">{{ icon() }}</span>
 
       <div class="min-w-0 flex-1">
         @if (title()) {
@@ -30,13 +25,12 @@ const ICONS: Record<ToastType, string> = {
 
       @if (dismissible()) {
         <button
-          mat-icon-button
           type="button"
-          class="!h-6 !w-6 shrink-0 opacity-60 hover:opacity-100"
+          class="shrink-0 p-0.5 rounded opacity-60 hover:opacity-100 transition-opacity"
           aria-label="Dismiss"
           (click)="dismissed.emit()"
         >
-          <mat-icon class="!text-[18px]">close</mat-icon>
+          <span class="material-icons text-[18px]">close</span>
         </button>
       }
     </div>
@@ -52,7 +46,7 @@ export class ToastComponent {
 
   protected readonly icon = computed(() => ICONS[this.type()]);
 
-  protected readonly containerClasses = computed(() => {
+  protected readonly containerClass = computed(() => {
     const t: Record<ToastType, string> = {
       success: 'border-green-200 bg-green-50 text-green-800',
       error:   'border-red-200 bg-red-50 text-red-800',

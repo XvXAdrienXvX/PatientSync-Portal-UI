@@ -1,17 +1,13 @@
 import { Component, computed, input } from '@angular/core';
-import { MatProgressSpinner } from '@angular/material/progress-spinner';
 
 type Size = 'sm' | 'md' | 'lg';
-
-const DIAMETERS: Record<Size, number> = { sm: 20, md: 32, lg: 48 };
 
 @Component({
   selector: 'ui-loader',
   standalone: true,
-  imports: [MatProgressSpinner],
   template: `
-    <div role="status" [attr.aria-label]="label()" [class]="wrapperClasses()">
-      <mat-progress-spinner mode="indeterminate" [diameter]="diameter()" />
+    <div role="status" [attr.aria-label]="label()" [class]="wrapperClass()">
+      <div class="animate-spin rounded-full border-2 border-current border-t-transparent" [class]="spinnerClass()"></div>
       <span class="sr-only">{{ label() }}</span>
       <ng-content />
     </div>
@@ -22,9 +18,9 @@ export class LoaderComponent {
   readonly label = input('Loading...');
   readonly fullscreen = input(false);
 
-  protected readonly diameter = computed(() => DIAMETERS[this.size()]);
+  protected readonly spinnerClass = computed(() => ({ sm: 'h-5 w-5', md: 'h-8 w-8', lg: 'h-12 w-12' })[this.size()]);
 
-  protected readonly wrapperClasses = computed(() =>
+  protected readonly wrapperClass = computed(() =>
     this.fullscreen()
       ? 'fixed inset-0 z-50 flex flex-col items-center justify-center gap-3 bg-white/80 backdrop-blur-sm'
       : 'flex items-center justify-center gap-3 p-4'
