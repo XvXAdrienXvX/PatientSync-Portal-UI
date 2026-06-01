@@ -5,11 +5,12 @@ import { Users } from '../types/users';
 import { CardComponent } from '../../../shared/ui/card/card';
 import { ButtonComponent } from '../../../shared/ui/button/button';
 import { lastValueFrom } from 'rxjs';
+import { LoaderComponent } from '../../../shared/ui/loader/loader';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CardComponent, ButtonComponent],
+  imports: [CardComponent, ButtonComponent, LoaderComponent],
   template: `
     <div class="min-h-screen flex items-center justify-center bg-slate-50 px-4">
       <div class="w-full max-w-md">
@@ -21,7 +22,7 @@ import { lastValueFrom } from 'rxjs';
 
           <div card-body class="px-6 pb-6 flex flex-col gap-4">
             @if (usersResource.isLoading()) {
-              <p class="text-sm text-slate-500">Loading users...</p>
+               <ui-loader label="Loading users..." />
             }
 
             @if (usersResource.error()) {
@@ -31,8 +32,8 @@ import { lastValueFrom } from 'rxjs';
             <div class="grid gap-4">
               @for (user of usersResource.value(); track user.id) {
                 <div class="flex flex-col gap-2">
-                  <span class="text-xs uppercase tracking-[0.16em] text-slate-500">{{ user.role }}</span>
-                  <ui-button type="button" variant="success" size="lg" (click)="selectUser(user)">
+                  <span class="text-xs uppercase text-slate-500">{{ user.role }}</span>
+                  <ui-button type="button" variant="primary" size="lg" (click)="selectUser(user)">
                     {{ user.fullName }}
                   </ui-button>
                   <div class="border-b border-slate-200 pt-1"></div>
