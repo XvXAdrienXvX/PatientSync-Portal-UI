@@ -15,7 +15,7 @@ import { LoaderComponent } from '../../../shared/ui/loader/loader';
     <div class="min-h-screen flex items-center justify-center bg-slate-50 px-4">
       <div class="w-full max-w-md">
         <ui-card appearance="raised">
-          <div card-header class="px-6 py-5">
+          <div card-header class="px-6 py-5 text-center">
             <h1 class="text-3xl font-semibold text-slate-900">Welcome</h1>
             <p class="mt-2 text-sm text-slate-600">Choose a test user</p>
           </div>
@@ -29,14 +29,16 @@ import { LoaderComponent } from '../../../shared/ui/loader/loader';
               <p class="text-sm text-red-500">Error loading users.</p>
             }
 
-            <div class="grid gap-4">
+            <div class="flex flex-col gap-4">
               @for (user of usersResource.value(); track user.id) {
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col items-center gap-2">
                   <span class="text-xs uppercase text-slate-500">{{ user.role }}</span>
-                  <ui-button type="button" variant="primary" size="lg" (click)="selectUser(user)">
-                    {{ user.fullName }}
-                  </ui-button>
-                  <div class="border-b border-slate-200 pt-1"></div>
+                  <div class="flex w-full justify-center">
+                    <ui-button type="button" variant="primary" size="lg" width="14rem" (click)="selectUser(user)">
+                      {{ user.fullName }}
+                    </ui-button>
+                  </div>
+                  <div class="w-full border-b border-slate-200 pt-1"></div>
                 </div>
               }
             </div>
