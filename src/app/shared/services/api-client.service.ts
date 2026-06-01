@@ -1,10 +1,11 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { env } from '../../../environments/env';
 
 type Params = Record<string, string | number | boolean | ReadonlyArray<string | number | boolean>>;
 
-const BASE_URL = import.meta.env.NG_APP_API_URL;
+const BASE_URL = env.NG_APP_API_URL;
 
 @Injectable({ providedIn: 'root' })
 export class ApiClient {

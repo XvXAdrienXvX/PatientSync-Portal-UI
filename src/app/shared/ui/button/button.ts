@@ -1,6 +1,6 @@
 import { Component, computed, input } from '@angular/core';
 
-type Variant = 'primary' | 'secondary' | 'danger' | 'ghost' | 'outline';
+type Variant = 'primary' | 'secondary' | 'danger' | 'ghost' | 'outline' | 'success';
 type Size = 'sm' | 'md' | 'lg';
 
 @Component({
@@ -27,11 +27,12 @@ export class ButtonComponent {
 
   protected readonly classes = computed(() => {
     const v: Record<Variant, string> = {
-      primary:   'bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 focus-visible:ring-blue-500',
+      primary:   'bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 focus-visible:ring-primary-500',
       secondary: 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300 focus-visible:ring-gray-400',
       danger:    'bg-red-600 text-white hover:bg-red-700 active:bg-red-800 focus-visible:ring-red-500',
-      ghost:     'text-gray-600 hover:bg-gray-100 active:bg-gray-200 focus-visible:ring-gray-400',
-      outline:   'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 active:bg-gray-100 focus-visible:ring-gray-400',
+      success:   'bg-green-600 text-white hover:bg-green-700 active:bg-green-800 focus-visible:ring-green-500',
+      ghost:     'text-primary-700 hover:bg-primary-50 active:bg-primary-100 focus-visible:ring-primary-400',
+      outline:   'border border-primary-300 bg-white text-primary-700 hover:bg-primary-50 active:bg-primary-100 focus-visible:ring-primary-400',
     };
     const s: Record<Size, string> = {
       sm: 'h-8 px-3 text-xs gap-1.5',

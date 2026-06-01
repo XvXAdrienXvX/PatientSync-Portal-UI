@@ -6,5 +6,5 @@ import { Users } from '../types/users';
 export class AuthService {
   private readonly apiClient =  inject(ApiClient)
 
-  getUsers = () => this.apiClient.get<Users[]>('/users');
+  getUsers = () => this.apiClient.get<Users[]>('/auth/users');
 }
