@@ -7,17 +7,8 @@ export type UserRole = 'patient' | 'doctor';
   standalone: true,
   template: `
     <header class="flex items-center h-14 px-4 bg-white border-b border-gray-200 shadow-sm shrink-0">
-      <span class="font-bold text-lg text-blue-600">Admedica</span>
       <span class="flex-1"></span>
       <span class="text-sm text-gray-600 mr-3 hidden sm:block">{{ userName() }}</span>
-      <button
-        type="button"
-        class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors"
-        aria-label="Toggle menu"
-        (click)="menuToggled.emit()"
-      >
-        <span class="material-icons text-[22px]">menu</span>
-      </button>
       <button
         type="button"
         class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors"

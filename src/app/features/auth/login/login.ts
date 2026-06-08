@@ -65,6 +65,7 @@ export class LoginComponent {
 
   protected selectUser(user: Users): void {
     this.userStateService.setCurrentUser(user);
-    this.router.navigate(['/dashboard']);
+    const baseRoute = user.role.toLowerCase() === 'patient' ? '/patient' : '/doctor';
+    this.router.navigate([baseRoute]);
   }
 }

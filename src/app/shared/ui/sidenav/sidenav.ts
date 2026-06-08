@@ -1,7 +1,7 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
-import { MENU_ITEMS } from '../../config/menu.config';
+import { PATIENT_MENU_ITEMS, DOCTOR_MENU_ITEMS, type MenuItem } from '../../config/menu.config';
 import { UserStateService } from '../../services/user-state.service';
 
 @Component({
@@ -29,7 +29,7 @@ import { UserStateService } from '../../services/user-state.service';
 
           <!-- Menu Items -->
           <ul class="flex-1 py-4">
-            @for (item of menuItems; track item.route) {
+            @for (item of menuItems(); track item.route) {
               <li>
                 <a
                   [routerLink]="item.route"
@@ -61,9 +61,14 @@ import { UserStateService } from '../../services/user-state.service';
   `,
 })
 export class SidenavComponent {
-  protected readonly menuItems = inject(MENU_ITEMS);
   protected readonly userStateService = inject(UserStateService);
   protected readonly isCollapsed = signal(false);
+
+  protected readonly menuItems = computed(() => {
+    const user = this.userStateService.currentUser();
+    if (!user) return [];
+    return user.role.toLowerCase() === 'patient' ? PATIENT_MENU_ITEMS : DOCTOR_MENU_ITEMS;
+  });
 
   protected toggleCollapse(): void {
     this.isCollapsed.update(v => !v);

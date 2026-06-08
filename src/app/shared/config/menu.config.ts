@@ -8,30 +8,45 @@ export interface MenuItem {
 
 export const MENU_ITEMS = new InjectionToken<MenuItem[]>('menu.items');
 
-export const DEFAULT_MENU_ITEMS: MenuItem[] = [
+export const PATIENT_MENU_ITEMS: MenuItem[] = [
   {
     label: 'Dashboard',
-    route: '/dashboard',
+    route: '/patient/dashboard',
     icon: 'dashboard',
   },
   {
-    label: 'Patients',
-    route: '/patients',
-    icon: 'people',
-  },
-  {
     label: 'Appointments',
-    route: '/appointments',
+    route: '/patient/appointments',
     icon: 'event',
   },
   {
-    label: 'Reports',
-    route: '/reports',
+    label: 'Health Records',
+    route: '/patient/health-records',
     icon: 'description',
   },
   {
-    label: 'Settings',
-    route: '/settings',
-    icon: 'settings',
+    label: 'Messages',
+    route: '/patient/messages',
+    icon: 'mail',
   },
 ];
+
+export const DOCTOR_MENU_ITEMS: MenuItem[] = [
+  {
+    label: 'Dashboard',
+    route: '/doctor/dashboard',
+    icon: 'dashboard',
+  },
+  {
+    label: 'Patient Search',
+    route: '/doctor/patient-search',
+    icon: 'people',
+  },
+  {
+    label: 'Messages',
+    route: '/doctor/messages',
+    icon: 'mail',
+  },
+];
+
+export const DEFAULT_MENU_ITEMS = PATIENT_MENU_ITEMS;
