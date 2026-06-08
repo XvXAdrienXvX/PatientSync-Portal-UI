@@ -1,6 +1,8 @@
 import { Component, inject, resource } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthConfigService } from '../../../shared/services/auth-config.service';
 import { AuthService } from '../services/auth.service';
+import { UserStateService } from '../../../shared/services/user-state.service';
 import { Users } from '../types/users';
 import { CardComponent } from '../../../shared/ui/card/card';
 import { ButtonComponent } from '../../../shared/ui/button/button';
@@ -51,6 +53,8 @@ import { LoaderComponent } from '../../../shared/ui/loader/loader';
 export class LoginComponent {
   protected readonly config = inject(AuthConfigService);
   private readonly authService = inject(AuthService);
+  private readonly userStateService = inject(UserStateService);
+  private readonly router = inject(Router);
 
   protected readonly usersResource = resource({
     loader: () => {
@@ -60,6 +64,7 @@ export class LoginComponent {
   });
 
   protected selectUser(user: Users): void {
-    console.log('Selected user:', user);
+    this.userStateService.setCurrentUser(user);
+    this.router.navigate(['/dashboard']);
   }
 }

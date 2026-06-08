@@ -5,6 +5,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 
 import { routes } from './app.routes';
 import { provideServiceWorker } from '@angular/service-worker';
+import { MENU_ITEMS, DEFAULT_MENU_ITEMS } from './shared/config/menu.config';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,5 +17,9 @@ export const appConfig: ApplicationConfig = {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    {
+      provide: MENU_ITEMS,
+      useValue: DEFAULT_MENU_ITEMS,
+    },
   ],
 };
