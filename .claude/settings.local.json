@@ -8,7 +8,9 @@
       "Bash(uv sync *)",
       "Bash(uv run *)",
       "Bash(Test-Path C:\\\\Users\\\\adrie_j88pz5v\\\\AppData\\\\Local\\\\ms-playwright\\\\chromium-1223 *)",
-      "Bash(npx ng *)"
+      "Bash(npx ng *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Dev\\\\PatientSync-Portal-UI\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)"
     ]
   }
 }

@@ -2,44 +2,64 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Monorepo Structure (Nx)
+
+This is an **Nx monorepo** with Angular 21 standalone-component applications. It contains:
+
+- **Apps**: `apps/patientsync-patient-portal-ui` (patient portal), `apps/patientsync-doctor-portal-ui` (doctor portal)
+- **Shared libs**: `libs/shared/ui/` (UI components), `libs/shared/layout/` (layout components)
+
 ## Commands
 
 ```bash
-npm start          # Dev server at http://localhost:4200 (auto-reloads on change)
-npm run build      # Production build → dist/PatientSync-Portal-UI/browser/
-npm run watch      # Dev build in watch mode
-npm test           # Run unit tests with Vitest via Angular CLI
-```
+# Patient portal (default)
+npm start                    # Dev server at http://localhost:4200
+npm run build                # Production build
+npm test                     # Run unit tests
 
-To run a single test file, use Vitest directly:
-```bash
-npx vitest run src/app/app.spec.ts
-```
+# Doctor portal
+npm run start:doctor         # Dev server at http://localhost:4201
+npm run build:doctor         # Production build
 
-There is no linter configured. Format code with Prettier:
-```bash
-npx prettier --write "src/**/*.{ts,html,css}"
+# All apps
+npm run build:all            # Build all apps
+
+# Shared libraries
+npm run test:shared          # Test shared-ui and shared-layout libs
+
+# Development tools
+npm run lint                 # Run ESLint
+npm run format               # Format code with Prettier
+npx nx graph                 # View dependency graph (generates nx-graph.html)
 ```
 
 ## Architecture
 
-This is an **Angular 21 standalone-component application** bootstrapped with `bootstrapApplication` in `src/main.ts`. There is no `NgModule`; all components use the standalone API and declare their own imports.
+Both apps follow an **Angular 21 standalone-component** architecture:
+- Bootstrapped with `bootstrapApplication` in `src/main.ts`
+- No `NgModule`; all components use the standalone API
+- Each app has its own `app.routes.ts` and `app.config.ts`
 
 **Key architectural points:**
 
-- **Routing**: `src/app/app.routes.ts` exports `routes` (currently empty). Add routes here; the `<router-outlet>` in `app.html` renders them.
-- **App config**: `src/app/app.config.ts` wires global providers (`provideRouter`, `provideServiceWorker`). Add app-wide providers (HTTP client, guards, interceptors) here.
-- **PWA**: Service worker (`@angular/service-worker`) is enabled in production only (`!isDevMode()`), registered via `ngsw-worker.js` after 30 s of stability.
-- **Styling**: Two style layers load in this order (see `angular.json`):
-  1. `src/material-theme.scss` — Angular Material M3 theme (azure-blue palette, CSS custom properties).
-  2. `src/styles.css` — Tailwind CSS v4 via `@import 'tailwindcss'`. Use Tailwind for layout, spacing, and utilities on top of Material components.
-- **Material Icons**: Loaded via `<link>` in `index.html`; use `<mat-icon>` directly without any import.
-- **Animations**: `provideAnimationsAsync()` is registered in `app.config.ts` — required for all Material component animations.
-- **State**: Use Angular `signal()` for local component state. Use `model()` for two-way bindable component inputs.
+- **Routing**: Each app's `app.routes.ts` exports `routes`. The `<router-outlet>` in `app.html` renders them.
+- **App config**: `app.config.ts` wires global providers (`provideRouter`, `provideServiceWorker`). Add app-wide providers here.
+- **PWA**: Service worker enabled in production only (`!isDevMode()`), registered via `ngsw-worker.js` after 30s of stability.
+- **Styling**: Two style layers (in order):
+  1. `material-theme.scss` — Angular Material M3 theme (azure-blue palette, CSS custom properties)
+  2. `styles.css` — Tailwind CSS v4 via `@import 'tailwindcss'`. Use Tailwind for layout, spacing, utilities.
+- **Material Icons**: Loaded via `<link>` in `index.html`; use `<mat-icon>` without imports.
+- **Animations**: `provideAnimationsAsync()` in `app.config.ts` — required for Material animations.
+- **State**: Use Angular `signal()` for local state, `model()` for two-way bindable inputs.
 
-## Shared UI components
+## Shared UI Components Library
 
-All reusable presentational components live in `src/app/shared/ui/` and are exported from the barrel `src/app/shared/ui/index.ts`. They combine Angular Material for structure/interactions and Tailwind for layout/utilities.
+All reusable presentational components live in `libs/shared/ui/src/lib/` and are exported from `libs/shared/ui/src/index.ts` (barrel export).
+
+**Import pattern:**
+```typescript
+import { ButtonComponent, CardComponent } from '@patientsync/shared/ui';
+```
 
 | Selector | File | Notes |
 |---|---|---|
@@ -58,9 +78,64 @@ All reusable presentational components live in `src/app/shared/ui/` and are expo
 </ui-form-field>
 ```
 
-## TypeScript & Angular conventions
+## Shared Layout Components Library
 
-- Strict mode is fully enabled (`strict`, `noImplicitOverride`, `noImplicitReturns`, `strictTemplates`, `strictInjectionParameters`).
-- Prettier is configured for 100-char line width and single quotes; HTML files use the `angular` parser.
-- Test files use Vitest globals (declared in `tsconfig.spec.json`); use `describe`/`it`/`expect` without imports.
-- Component filenames follow the pattern `<name>.ts` / `<name>.html` / `<name>.css` / `<name>.spec.ts` (no `.component` infix — see existing `app.ts`).
+Layout components in `libs/shared/layout/src/lib/`:
+- `header/` — App header with user info, logout
+- `shells/doctor-shell.ts` — Doctor portal layout shell
+- `shells/patient-shell.ts` — Patient portal layout shell
+
+**Import pattern:**
+```typescript
+import { DoctorShellComponent, PatientShellComponent, HeaderComponent } from '@patientsync/shared/layout';
+```
+
+## Apps
+
+### Patient Portal (`apps/patientsync-patient-portal-ui`)
+
+Features:
+- Auth: Login
+- Patient dashboard
+- Appointments management
+- Health records
+- Messaging
+
+Routes:
+- `/auth/login` — Patient login
+- `/patient/dashboard` — Dashboard
+- `/patient/appointments` — Appointments list
+- `/patient/appointments/book` — Book appointment
+- `/patient/health-records` — Health records
+- `/patient/messages` — Messages
+
+### Doctor Portal (`apps/patientsync-doctor-portal-ui`)
+
+Features:
+- Auth: Login
+- Doctor dashboard
+- Patient search
+- Patient chart view
+- Visit notes
+- Messaging
+
+Routes:
+- `/auth/login` — Doctor login
+- `/doctor/dashboard` — Dashboard
+- `/doctor/patient-search` — Find patients
+- `/doctor/patient-chart/:id` — View patient chart
+- `/doctor/patient-chart/:id/add-notes` — Add visit notes
+- `/doctor/messages` — Messages
+
+## TypeScript & Angular Conventions
+
+- Strict mode enabled: `strict`, `noImplicitOverride`, `noImplicitReturns`, `strictTemplates`, `strictInjectionParameters`.
+- Prettier: 100-char line width, single quotes; HTML uses `angular` parser.
+- Tests: Use Vitest globals (`describe`/`it`/`expect` without imports).
+- Component filenames: `<name>.ts`, `<name>.html`, `<name>.css`, `<name>.spec.ts` (no `.component` infix).
+
+## Path Aliases
+
+TypeScript path aliases are defined in `tsconfig.base.json`:
+- `@patientsync/shared/ui` → `libs/shared/ui/src/index.ts`
+- `@patientsync/shared/layout` → `libs/shared/layout/src/index.ts`
