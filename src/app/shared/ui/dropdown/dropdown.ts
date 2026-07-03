@@ -1,6 +1,4 @@
-import { Component, input, model } from '@angular/core';
-import { MatError, MatFormField, MatHint, MatLabel } from '@angular/material/form-field';
-import { MatOption, MatSelect } from '@angular/material/select';
+import { Component, computed, input, model } from '@angular/core';
 
 export interface DropdownOption {
   label: string;
@@ -11,39 +9,38 @@ export interface DropdownOption {
 @Component({
   selector: 'ui-dropdown',
   standalone: true,
-  imports: [MatFormField, MatLabel, MatSelect, MatOption, MatError, MatHint],
   template: `
-    <mat-form-field appearance="outline" class="w-full">
+    <div class="flex flex-col gap-1 w-full">
       @if (label()) {
-        <mat-label>
+        <label class="text-sm font-medium text-gray-700">
           {{ label() }}
           @if (required()) {
-            <span class="text-red-500" aria-hidden="true">*</span>
+            <span class="text-red-500 ml-0.5" aria-hidden="true">*</span>
           }
-        </mat-label>
+        </label>
       }
 
-      <mat-select
+      <select
         [value]="value()"
-        (valueChange)="value.set($event)"
+        (change)="onChange($event)"
         [disabled]="disabled()"
         [required]="required()"
-        [placeholder]="placeholder()"
+        [class]="selectClass()"
       >
+        <option value="" disabled [selected]="value() === null">{{ placeholder() }}</option>
         @for (option of options(); track option.value) {
-          <mat-option [value]="option.value" [disabled]="option.disabled ?? false">
+          <option [value]="option.value" [disabled]="option.disabled ?? false">
             {{ option.label }}
-          </mat-option>
+          </option>
         }
-      </mat-select>
+      </select>
 
       @if (error()) {
-        <mat-error>{{ error() }}</mat-error>
+        <p class="text-xs text-red-600">{{ error() }}</p>
+      } @else if (hint()) {
+        <p class="text-xs text-gray-400">{{ hint() }}</p>
       }
-      @if (hint() && !error()) {
-        <mat-hint>{{ hint() }}</mat-hint>
-      }
-    </mat-form-field>
+    </div>
   `,
 })
 export class DropdownComponent {
@@ -55,4 +52,17 @@ export class DropdownComponent {
   readonly required = input(false);
   readonly disabled = input(false);
   readonly value = model<string | number | null>(null);
+
+  protected readonly selectClass = computed(() => {
+    const state = this.error()
+      ? 'border-red-400 focus:border-red-500 focus:ring-red-500/20'
+      : 'border-gray-300 focus:border-primary-500 focus:ring-primary-500/20';
+    return `w-full rounded-lg border px-3 py-2 text-sm text-gray-900 bg-white transition-colors focus:outline-none focus:ring-2 disabled:bg-gray-50 disabled:text-gray-400 disabled:cursor-not-allowed ${state}`;
+  });
+
+  protected onChange(event: Event): void {
+    const raw = (event.target as HTMLSelectElement).value;
+    const num = Number(raw);
+    this.value.set(isNaN(num) || raw === '' ? raw : num);
+  }
 }
