@@ -45,3 +45,7 @@ src/environments/env.ts
 # System files
 .DS_Store
 Thumbs.db
+
+.angular
+
+vitest.config.*.timestamp*

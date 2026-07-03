@@ -1,0 +1,16 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve",
+    "skipLibCheck": true,
+    "paths": {
+      "@patientsync/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@patientsync/shared/ui/*": ["libs/shared/ui/src/lib/*"],
+      "@patientsync/shared/layout": ["libs/shared/layout/src/index.ts"],
+      "@patientsync/shared/layout/*": ["libs/shared/layout/src/lib/*"]
+    }
+  }
+}

@@ -1,0 +1,1369 @@
+{
+  "version": "6.0",
+  "nxVersion": "23.0.1",
+  "pathMappings": {
+    "@patientsync/shared/ui": [
+      "libs/shared/ui/src/index.ts"
+    ],
+    "@patientsync/shared/ui/*": [
+      "libs/shared/ui/src/lib/*"
+    ],
+    "@patientsync/shared/layout": [
+      "libs/shared/layout/src/index.ts"
+    ],
+    "@patientsync/shared/layout/*": [
+      "libs/shared/layout/src/lib/*"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "public/icons/icon-152x152.png",
+        "hash": "15801439294603939434"
+      },
+      {
+        "file": "src/app/features/patient/appointments/appointments-list/appointments-list.ts",
+        "hash": "2014300452433980142"
+      },
+      {
+        "file": ".vscode/mcp.json",
+        "hash": "11492871017727097845"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/app.routes.ts",
+        "hash": "16292525443124445724"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/data-resolvers.md",
+        "hash": "4107578235617478842"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/route-animations.md",
+        "hash": "7644061054431661116"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/component-styling.md",
+        "hash": "3958641931967484197"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/component-styling.md",
+        "hash": "3958641931967484197"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.postcssrc.json",
+        "hash": "12098411909725170385"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/show-routes-with-outlets.md",
+        "hash": "16147709519959458011"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/inputs.md",
+        "hash": "9487844264414615740"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/cli.md",
+        "hash": "12346971379652604017"
+      },
+      {
+        "file": "src/app/features/doctor/messages/doctor-messages.ts",
+        "hash": "65559153471291349"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "4992454061127415635"
+      },
+      {
+        "file": "public/icons/icon-144x144.png",
+        "hash": "7918264055681161054"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/template-driven-forms.md",
+        "hash": "8522290522066919729"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/patient/messages/patient-messages.ts",
+        "hash": "12054792659956654748"
+      },
+      {
+        "file": "static/environment.js",
+        "hash": "7414187453093137014"
+      },
+      {
+        "file": "public/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "static/styles.css",
+        "hash": "17891475750148883061"
+      },
+      {
+        "file": "src/app/shared/ui/input/input.ts",
+        "hash": "15133995230447235521"
+      },
+      {
+        "file": "public/icons/icon-192x192.png",
+        "hash": "5426725225393538606"
+      },
+      {
+        "file": "CLAUDE.md",
+        "hash": "1299466279959919106"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/navigate-to-routes.md",
+        "hash": "442872665332340854"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/hierarchical-injectors.md",
+        "hash": "15048902371455891790"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/components.md",
+        "hash": "17639036557115677944"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/loading-strategies.md",
+        "hash": "7000830398559313112"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "4194304421967065169"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/migrations.md",
+        "hash": "6465608107831712342"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/outputs.md",
+        "hash": "16177743211007306061"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/signal-forms.md",
+        "hash": "12874560664887872969"
+      },
+      {
+        "file": "src/app/features/doctor/patient-search/patient-search.ts",
+        "hash": "7168860994751723868"
+      },
+      {
+        "file": "public/icons/icon-72x72.png",
+        "hash": "8211841038932698272"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/public/icons/icon-72x72.png",
+        "hash": "8211841038932698272"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/testing-fundamentals.md",
+        "hash": "9843353305303998450"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/data-resolvers.md",
+        "hash": "4107578235617478842"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/package-lock.json",
+        "hash": "16912309297760781600"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/shared/ui/input/input.ts",
+        "hash": "15133995230447235521"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/shared/ui/toast/toast.ts",
+        "hash": "2097369882499586556"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/migrations.md",
+        "hash": "6465608107831712342"
+      },
+      {
+        "file": "src/app/shared/ui/loader/loader.ts",
+        "hash": "297022670159291245"
+      },
+      {
+        "file": "angular.json",
+        "hash": "15390646909660422458"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/components.md",
+        "hash": "17639036557115677944"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "7467919868826279542"
+      },
+      {
+        "file": "src/app/shared/ui/dropdown/dropdown.ts",
+        "hash": "13815949626359991099"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/package.json",
+        "hash": "8615517789328707821"
+      },
+      {
+        "file": "src/app/shared/ui/form-field/form-field.ts",
+        "hash": "763153910029889552"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "10136459155298117738"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/linked-signal.md",
+        "hash": "15578750924985234946"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/angular.json",
+        "hash": "15658486058103000377"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/angular-animations.md",
+        "hash": "2865100612632483334"
+      },
+      {
+        "file": "src/app/shared/layout/header/header.ts",
+        "hash": "4256416197438255081"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/hierarchical-injectors.md",
+        "hash": "15048902371455891790"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.vscode/mcp.json",
+        "hash": "11492871017727097845"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/public/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "public/icons/icon-96x96.png",
+        "hash": "17857169027528193372"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/template-driven-forms.md",
+        "hash": "8522290522066919729"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/inputs.md",
+        "hash": "9487844264414615740"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/mcp.md",
+        "hash": "10301624111484619102"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/tsconfig.json",
+        "hash": "12986063587128948135"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/router-testing.md",
+        "hash": "12232479677092262507"
+      },
+      {
+        "file": ".claude/specs/mvp-product-specification.md",
+        "hash": "9459123304042070287"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "5407418692668764289"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/angular-aria.md",
+        "hash": "7240517081971816255"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/app.ts",
+        "hash": "9759489822433390279"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/defining-providers.md",
+        "hash": "7796015003900786208"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/app.spec.ts",
+        "hash": "1215556792477750699"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "17179365984756976932"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/public/icons/icon-192x192.png",
+        "hash": "5426725225393538606"
+      },
+      {
+        "file": "package.json",
+        "hash": "8213219339462030879"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/creating-services.md",
+        "hash": "13569570821588243577"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "10405740721546735325"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/patient/appointments/appointments-list/appointments-list.ts",
+        "hash": "2014300452433980142"
+      },
+      {
+        "file": "src/app/features/auth/auth.routes.ts",
+        "hash": "8279118366130006035"
+      },
+      {
+        "file": "static/main.js",
+        "hash": "17347417976865190323"
+      },
+      {
+        "file": ".postcssrc.json",
+        "hash": "12098411909725170385"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/shared/layout/shells/patient-shell.ts",
+        "hash": "16427227481148754644"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/shared/ui/dropdown/dropdown.ts",
+        "hash": "13815949626359991099"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/loading-strategies.md",
+        "hash": "7000830398559313112"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/app.config.ts",
+        "hash": "2703171006652428444"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/shared/ui/loader/loader.ts",
+        "hash": "297022670159291245"
+      },
+      {
+        "file": "public/icons/icon-512x512.png",
+        "hash": "15496412176428542718"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/doctor/patient-chart/patient-chart.ts",
+        "hash": "14354546786039349912"
+      },
+      {
+        "file": "src/app/app.routes.ts",
+        "hash": "16292525443124445724"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.vscode/launch.json",
+        "hash": "17406702432687230417"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/effects.md",
+        "hash": "15397215296049486606"
+      },
+      {
+        "file": "src/app/features/patient/messages/patient-messages.ts",
+        "hash": "12054792659956654748"
+      },
+      {
+        "file": "src/app/app.config.ts",
+        "hash": "2703171006652428444"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/index.html",
+        "hash": "14840727566131571061"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/rendering-strategies.md",
+        "hash": "5300131674485686461"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/public/icons/icon-128x128.png",
+        "hash": "16119513566521364320"
+      },
+      {
+        "file": "src/app/features/patient/appointments/book-appointment/book-appointment.ts",
+        "hash": "18084006960713819724"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/route-guards.md",
+        "hash": "15098590410228534239"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/doctor/dashboard/doctor-dashboard.ts",
+        "hash": "5739258502024534014"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/public/icons/icon-144x144.png",
+        "hash": "7918264055681161054"
+      },
+      {
+        "file": "src/app/shared/ui/toast/toast.ts",
+        "hash": "2097369882499586556"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.editorconfig",
+        "hash": "8037249353422744134"
+      },
+      {
+        "file": ".claude/settings.local.json",
+        "hash": "12140552380739495685"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/router-lifecycle.md",
+        "hash": "15553890101996601272"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/patient/dashboard/patient-dashboard.ts",
+        "hash": "14553014839433404247"
+      },
+      {
+        "file": "src/app/shared/layout/shells/doctor-shell.ts",
+        "hash": "17139482746996201268"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/component-harnesses.md",
+        "hash": "12445691591878579508"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/tailwind-css.md",
+        "hash": "18407094710699204856"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "8037249353422744134"
+      },
+      {
+        "file": "README.md",
+        "hash": "15014436202673055408"
+      },
+      {
+        "file": "src/app/app.html",
+        "hash": "11958735616642380711"
+      },
+      {
+        "file": "public/icons/icon-128x128.png",
+        "hash": "16119513566521364320"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/route-animations.md",
+        "hash": "7644061054431661116"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/README.md",
+        "hash": "15014436202673055408"
+      },
+      {
+        "file": "static/runtime.js",
+        "hash": "14980783667260047515"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/host-elements.md",
+        "hash": "14305341638733756961"
+      },
+      {
+        "file": "vitest.workspace.ts",
+        "hash": "14594439412287490675"
+      },
+      {
+        "file": "src/app/features/patient/health-records/health-records.ts",
+        "hash": "14852806661523289412"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/define-routes.md",
+        "hash": "16424471986955669867"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/CLAUDE.md",
+        "hash": "9107654379147229568"
+      },
+      {
+        "file": "static/favicon.ico",
+        "hash": "9303420814833116677"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/shared/layout/header/header.ts",
+        "hash": "4256416197438255081"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/public/manifest.webmanifest",
+        "hash": "5348847708625311696"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/doctor/doctor.routes.ts",
+        "hash": "4272081622466761086"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/public/icons/icon-96x96.png",
+        "hash": "17857169027528193372"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.vscode/tasks.json",
+        "hash": "11080398893561185157"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/skills-lock.json",
+        "hash": "16174912313250499760"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/angular-aria.md",
+        "hash": "7240517081971816255"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "17640351854816693064"
+      },
+      {
+        "file": "src/app/features/doctor/patient-chart/add-visit-notes/add-visit-notes.ts",
+        "hash": "4272463390119777664"
+      },
+      {
+        "file": "src/app/features/patient/patient.routes.ts",
+        "hash": "3265749735776272316"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/e2e-testing.md",
+        "hash": "17207434025973154094"
+      },
+      {
+        "file": "src/styles.css",
+        "hash": "17004464464911970003"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/injection-context.md",
+        "hash": "7345699603200737533"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/app.html",
+        "hash": "11958735616642380711"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/linked-signal.md",
+        "hash": "15578750924985234946"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/define-routes.md",
+        "hash": "16424471986955669867"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/public/icons/icon-384x384.png",
+        "hash": "14349113523743396697"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/shared/ui/button/button.ts",
+        "hash": "8895223365492003524"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/defining-providers.md",
+        "hash": "7796015003900786208"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/signals-overview.md",
+        "hash": "1125751998440750138"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/material-theme.scss",
+        "hash": "13677504732293672515"
+      },
+      {
+        "file": "public/manifest.webmanifest",
+        "hash": "5348847708625311696"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "11080398893561185157"
+      },
+      {
+        "file": "public/icons/icon-384x384.png",
+        "hash": "14349113523743396697"
+      },
+      {
+        "file": "src/app/app.ts",
+        "hash": "9759489822433390279"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/outputs.md",
+        "hash": "16177743211007306061"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/di-fundamentals.md",
+        "hash": "9096357560307856331"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/main.ts",
+        "hash": "10405740721546735325"
+      },
+      {
+        "file": ".agents/skills/angular-developer/SKILL.md",
+        "hash": "15242549828403186165"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.claude/settings.local.json",
+        "hash": "12140552380739495685"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/route-guards.md",
+        "hash": "15098590410228534239"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "12926286793420397906"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17406702432687230417"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/component-harnesses.md",
+        "hash": "12445691591878579508"
+      },
+      {
+        "file": "src/app/features/doctor/doctor.routes.ts",
+        "hash": "4272081622466761086"
+      },
+      {
+        "file": "src/app/app.spec.ts",
+        "hash": "1215556792477750699"
+      },
+      {
+        "file": "src/app/features/doctor/dashboard/doctor-dashboard.ts",
+        "hash": "5739258502024534014"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/shared/ui/form-field/form-field.ts",
+        "hash": "763153910029889552"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/ngsw-config.json",
+        "hash": "4531752316149792368"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.vscode/extensions.json",
+        "hash": "11934160580685414355"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/resource.md",
+        "hash": "7720499722360661576"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "189877243707603707"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/router-testing.md",
+        "hash": "12232479677092262507"
+      },
+      {
+        "file": "src/app/shared/ui/button/button.ts",
+        "hash": "8895223365492003524"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/tailwind-css.md",
+        "hash": "18407094710699204856"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/public/icons/icon-152x152.png",
+        "hash": "15801439294603939434"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/navigate-to-routes.md",
+        "hash": "442872665332340854"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/patient/patient.routes.ts",
+        "hash": "3265749735776272316"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/rendering-strategies.md",
+        "hash": "5300131674485686461"
+      },
+      {
+        "file": "nx.json",
+        "hash": "13174236999636016691"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/signal-forms.md",
+        "hash": "12874560664887872969"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/cli.md",
+        "hash": "12346971379652604017"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/auth/login/login.ts",
+        "hash": "406204261290054853"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "8201657512789538828"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/patient/health-records/health-records.ts",
+        "hash": "14852806661523289412"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/doctor/patient-search/patient-search.ts",
+        "hash": "7168860994751723868"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/doctor/patient-chart/add-visit-notes/add-visit-notes.ts",
+        "hash": "4272463390119777664"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/injection-context.md",
+        "hash": "7345699603200737533"
+      },
+      {
+        "file": "src/app/shared/layout/shells/patient-shell.ts",
+        "hash": "16427227481148754644"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/styles.css",
+        "hash": "17004464464911970003"
+      },
+      {
+        "file": "src/app/shared/ui/card/card.ts",
+        "hash": "2728927693761537037"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/effects.md",
+        "hash": "15397215296049486606"
+      },
+      {
+        "file": "src/material-theme.scss",
+        "hash": "13677504732293672515"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/reactive-forms.md",
+        "hash": "15432830340443967624"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/patient/appointments/book-appointment/book-appointment.ts",
+        "hash": "18084006960713819724"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/auth/auth.routes.ts",
+        "hash": "8279118366130006035"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/shared/ui/card/card.ts",
+        "hash": "2728927693761537037"
+      },
+      {
+        "file": "skills-lock.json",
+        "hash": "16174912313250499760"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/reactive-forms.md",
+        "hash": "15432830340443967624"
+      },
+      {
+        "file": "ngsw-config.json",
+        "hash": "4531752316149792368"
+      },
+      {
+        "file": "static/styles.js",
+        "hash": "2882336869304343415"
+      },
+      {
+        "file": "src/app/features/doctor/patient-chart/patient-chart.ts",
+        "hash": "14354546786039349912"
+      },
+      {
+        "file": "src/app/app.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/show-routes-with-outlets.md",
+        "hash": "16147709519959458011"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "14840727566131571061"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/SKILL.md",
+        "hash": "15242549828403186165"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/public/icons/icon-512x512.png",
+        "hash": "15496412176428542718"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/tsconfig.spec.json",
+        "hash": "189877243707603707"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/signals-overview.md",
+        "hash": "1125751998440750138"
+      },
+      {
+        "file": "src/app/features/auth/login/login.ts",
+        "hash": "406204261290054853"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/mcp.md",
+        "hash": "10301624111484619102"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.claude/specs/mvp-product-specification.md",
+        "hash": "9459123304042070287"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.gitignore",
+        "hash": "5024476166486271931"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/app.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/router-lifecycle.md",
+        "hash": "15553890101996601272"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/features/doctor/messages/doctor-messages.ts",
+        "hash": "65559153471291349"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.prettierrc",
+        "hash": "7467919868826279542"
+      },
+      {
+        "file": ".agents/skills/angular-developer/references/host-elements.md",
+        "hash": "14305341638733756961"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/di-fundamentals.md",
+        "hash": "9096357560307856331"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/testing-fundamentals.md",
+        "hash": "9843353305303998450"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/angular-animations.md",
+        "hash": "2865100612632483334"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/resource.md",
+        "hash": "7720499722360661576"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/creating-services.md",
+        "hash": "13569570821588243577"
+      },
+      {
+        "file": "src/app/features/patient/dashboard/patient-dashboard.ts",
+        "hash": "14553014839433404247"
+      },
+      {
+        "file": "nx-graph.html",
+        "hash": "6986935609089304540"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/tsconfig.app.json",
+        "hash": "10136459155298117738"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/src/app/shared/layout/shells/doctor-shell.ts",
+        "hash": "17139482746996201268"
+      },
+      {
+        "file": ".claude/worktrees/agent-a21eda0d9ebbc4dbd/.agents/skills/angular-developer/references/e2e-testing.md",
+        "hash": "17207434025973154094"
+      }
+    ],
+    "projectFileMap": {
+      "patientsync-doctor-portal-ui": [
+        {
+          "file": "apps/patientsync-doctor-portal-ui/project.json",
+          "hash": "15151609886842603901"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/app.config.ts",
+          "hash": "2703171006652428444",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/platform-browser",
+            "npm:@angular/service-worker"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/app.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/app.html",
+          "hash": "11958735616642380711"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/app.routes.ts",
+          "hash": "11908186533324579678",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/app.spec.ts",
+          "hash": "1215556792477750699",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/app.ts",
+          "hash": "9759489822433390279",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/features/auth/auth.routes.ts",
+          "hash": "8279118366130006035",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/features/auth/login/login.ts",
+          "hash": "1718881642365381305",
+          "deps": [
+            "npm:@angular/core",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/features/doctor/dashboard/doctor-dashboard.ts",
+          "hash": "17850874201729248177",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/material",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/features/doctor/doctor.routes.ts",
+          "hash": "17143246194617139192",
+          "deps": [
+            "npm:@angular/router",
+            [
+              "layout",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/features/doctor/messages/doctor-messages.ts",
+          "hash": "8505384741935296585",
+          "deps": [
+            "npm:@angular/core",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/features/doctor/patient-chart/add-visit-notes/add-visit-notes.ts",
+          "hash": "2189029943313452853",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/features/doctor/patient-chart/patient-chart.ts",
+          "hash": "9026438845184276865",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/material",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/app/features/doctor/patient-search/patient-search.ts",
+          "hash": "15058721476804010093",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/index.html",
+          "hash": "14840727566131571061"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/main.ts",
+          "hash": "10405740721546735325",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/material-theme.scss",
+          "hash": "13677504732293672515"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/public/favicon.ico",
+          "hash": "3988961587069885523"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/public/icons/icon-128x128.png",
+          "hash": "16119513566521364320"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/public/icons/icon-144x144.png",
+          "hash": "7918264055681161054"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/public/icons/icon-152x152.png",
+          "hash": "15801439294603939434"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/public/icons/icon-192x192.png",
+          "hash": "5426725225393538606"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/public/icons/icon-384x384.png",
+          "hash": "14349113523743396697"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/public/icons/icon-512x512.png",
+          "hash": "15496412176428542718"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/public/icons/icon-72x72.png",
+          "hash": "8211841038932698272"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/public/icons/icon-96x96.png",
+          "hash": "17857169027528193372"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/public/manifest.webmanifest",
+          "hash": "5348847708625311696"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/src/styles.css",
+          "hash": "17004464464911970003"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/tsconfig.app.json",
+          "hash": "10775526128817377197"
+        },
+        {
+          "file": "apps/patientsync-doctor-portal-ui/tsconfig.json",
+          "hash": "1725865937272093533"
+        }
+      ],
+      "layout": [
+        {
+          "file": "libs/shared/layout/project.json",
+          "hash": "5413344882681721847"
+        },
+        {
+          "file": "libs/shared/layout/src/index.ts",
+          "hash": "17216834761739963305"
+        },
+        {
+          "file": "libs/shared/layout/src/lib/header.ts",
+          "hash": "4256416197438255081",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/layout/src/lib/header/header.ts",
+          "hash": "4256416197438255081",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/layout/src/lib/shells/doctor-shell.ts",
+          "hash": "17139482746996201268",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/layout/src/lib/shells/patient-shell.ts",
+          "hash": "16427227481148754644",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/material"
+          ]
+        }
+      ],
+      "ui": [
+        {
+          "file": "libs/shared/ui/project.json",
+          "hash": "1572353349207918867"
+        },
+        {
+          "file": "libs/shared/ui/src/index.ts",
+          "hash": "4952572046655554581"
+        },
+        {
+          "file": "libs/shared/ui/src/lib/button.ts",
+          "hash": "8895223365492003524",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/lib/button/button.ts",
+          "hash": "8895223365492003524",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/lib/card/card.ts",
+          "hash": "2728927693761537037",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/lib/dropdown/dropdown.ts",
+          "hash": "13815949626359991099",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/lib/form-field/form-field.ts",
+          "hash": "763153910029889552",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/lib/input/input.ts",
+          "hash": "15133995230447235521",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/lib/loader/loader.ts",
+          "hash": "297022670159291245",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/lib/toast/toast.ts",
+          "hash": "2097369882499586556",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        }
+      ],
+      "patientsync-patient-portal-ui": [
+        {
+          "file": "apps/patientsync-patient-portal-ui/project.json",
+          "hash": "17091588485543279552"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/app.config.ts",
+          "hash": "2703171006652428444",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/platform-browser",
+            "npm:@angular/service-worker"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/app.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/app.html",
+          "hash": "11958735616642380711"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/app.routes.ts",
+          "hash": "8591929317773370445",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/app.spec.ts",
+          "hash": "1215556792477750699",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/app.ts",
+          "hash": "9759489822433390279",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/features/auth/auth.routes.ts",
+          "hash": "8279118366130006035",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/features/auth/login/login.ts",
+          "hash": "1718881642365381305",
+          "deps": [
+            "npm:@angular/core",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/features/patient/appointments/appointments-list/appointments-list.ts",
+          "hash": "8291993053629000450",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/features/patient/appointments/book-appointment/book-appointment.ts",
+          "hash": "3549328144540046929",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/features/patient/dashboard/patient-dashboard.ts",
+          "hash": "7676773694234195806",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/material",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/features/patient/health-records/health-records.ts",
+          "hash": "1642061345841729060",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/features/patient/messages/patient-messages.ts",
+          "hash": "16177148952909202407",
+          "deps": [
+            "npm:@angular/core",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/app/features/patient/patient.routes.ts",
+          "hash": "11942198788661597692",
+          "deps": [
+            "npm:@angular/router",
+            [
+              "layout",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/index.html",
+          "hash": "14840727566131571061"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/main.ts",
+          "hash": "10405740721546735325",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/material-theme.scss",
+          "hash": "13677504732293672515"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/public/favicon.ico",
+          "hash": "3988961587069885523"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/public/icons/icon-128x128.png",
+          "hash": "16119513566521364320"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/public/icons/icon-144x144.png",
+          "hash": "7918264055681161054"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/public/icons/icon-152x152.png",
+          "hash": "15801439294603939434"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/public/icons/icon-192x192.png",
+          "hash": "5426725225393538606"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/public/icons/icon-384x384.png",
+          "hash": "14349113523743396697"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/public/icons/icon-512x512.png",
+          "hash": "15496412176428542718"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/public/icons/icon-72x72.png",
+          "hash": "8211841038932698272"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/public/icons/icon-96x96.png",
+          "hash": "17857169027528193372"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/public/manifest.webmanifest",
+          "hash": "5348847708625311696"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/src/styles.css",
+          "hash": "17004464464911970003"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/tsconfig.app.json",
+          "hash": "3516820614457744774"
+        },
+        {
+          "file": "apps/patientsync-patient-portal-ui/tsconfig.json",
+          "hash": "1725865937272093533"
+        }
+      ]
+    }
+  },
+  "externalNodesHash": "17907209358849503395"
+}
